@@ -178,7 +178,9 @@
     datePicker.timeZone = self.timeZone;
     datePicker.locale = self.locale;
     if (@available(iOS 13.4, *)) {
-        datePicker.preferredDatePickerStyle = self.datePickerStyle;
+//        datePicker.preferredDatePickerStyle = self.datePickerStyle;
+        datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+        datePicker.frame = datePickerFrame;
     } else {
         UIColor *textColor = [self.pickerTextAttributes valueForKey:NSForegroundColorAttributeName];
         if (textColor) {
